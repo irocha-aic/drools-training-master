@@ -86,6 +86,9 @@ public class Passport implements java.io.Serializable {
     public String toString() {
        return java.lang.String.format("Passport[no:%s, name:%s]", passportNumber, name);
     }
-
+    
+    public static PassportBuilder newBuilder() {
+       return new PassportBuilder();
+    }
 
 }
