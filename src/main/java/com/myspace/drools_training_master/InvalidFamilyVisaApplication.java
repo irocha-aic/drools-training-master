@@ -6,12 +6,25 @@ package com.myspace.drools_training_master;
 
 public class InvalidFamilyVisaApplication implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public InvalidFamilyVisaApplication() {
-    }
+	private com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication;
 
+	public InvalidFamilyVisaApplication() {
+	}
 
+	public com.myspace.drools_training_master.FamilyVisaApplication getFamilyVisaApplication() {
+		return this.familyVisaApplication;
+	}
 
+	public void setFamilyVisaApplication(
+			com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication) {
+		this.familyVisaApplication = familyVisaApplication;
+	}
+
+	public InvalidFamilyVisaApplication(
+			com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication) {
+		this.familyVisaApplication = familyVisaApplication;
+	}
 
 }
