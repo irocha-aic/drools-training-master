@@ -128,14 +128,6 @@ public class Passport implements java.io.Serializable {
 		}
 	}
 
-	public java.lang.String getValidation() {
-		return this.validation;
-	}
-
-	public void setValidation(java.lang.String validation) {
-		this.validation = validation;
-	}
-
 	public Passport(java.lang.String passportNumber, java.lang.String name,
 			java.time.LocalDate expiresOn, int unusedVisaPages, int age,
 			java.lang.String cause, java.lang.String validation) {
