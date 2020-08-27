@@ -6,12 +6,36 @@ package com.myspace.drools_training_master;
 
 public class GroupLeader implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public GroupLeader() {
-    }
+	private com.myspace.drools_training_master.Passport passport;
+	private com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication;
 
+	public GroupLeader() {
+	}
 
+	public com.myspace.drools_training_master.Passport getPassport() {
+		return this.passport;
+	}
 
+	public void setPassport(com.myspace.drools_training_master.Passport passport) {
+		this.passport = passport;
+	}
+
+	public com.myspace.drools_training_master.FamilyVisaApplication getFamilyVisaApplication() {
+		return this.familyVisaApplication;
+	}
+
+	public void setFamilyVisaApplication(
+			com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication) {
+		this.familyVisaApplication = familyVisaApplication;
+	}
+
+	public GroupLeader(
+			com.myspace.drools_training_master.Passport passport,
+			com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication) {
+		this.passport = passport;
+		this.familyVisaApplication = familyVisaApplication;
+	}
 
 }
