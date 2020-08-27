@@ -144,14 +144,14 @@ public class Passport implements java.io.Serializable {
        Passport passport = (Passport) o;
        return unusedVisaPages == passport.unusedVisaPages &&
         age == passport.age &&
-        Objects.equals(passportNumber, passport.passportNumber) &&
-        Objects.equals(name, passport.name) &&
-        Objects.equals(expiresOn, passport.expiresOn) &&
-        Objects.equals(cause, passport.cause);
+        java.util.Objects.equals(passportNumber, passport.passportNumber) &&
+        java.util.Objects.equals(name, passport.name) &&
+        java.util.Objects.equals(expiresOn, passport.expiresOn) &&
+        java.util.Objects.equals(cause, passport.cause);
     }
 
     @Override
     public int hashCode() {
-       return Objects.hash(passportNumber, name, expiresOn, unusedVisaPages, age, cause);
+       return java.util.Objects.hash(passportNumber, name, expiresOn, unusedVisaPages, age, cause);
     }
 }
