@@ -66,6 +66,10 @@ public class Passport implements java.io.Serializable {
 	public void setCause(java.lang.String cause) {
 		this.cause = cause;
 	}
+	
+	public boolean isExpired() {
+        return this.expiresOn.isBefore(java.time.LocalDate.now());
+    }
 
 	public Passport(java.lang.String passportNumber, java.lang.String name,
 			java.time.LocalDate expiresOn, int unusedVisaPages, int age,
