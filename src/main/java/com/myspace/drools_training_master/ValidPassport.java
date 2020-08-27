@@ -6,12 +6,23 @@ package com.myspace.drools_training_master;
 
 public class ValidPassport implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ValidPassport() {
-    }
+	private com.myspace.drools_training_master.Passport passport;
 
+	public ValidPassport() {
+	}
 
+	public com.myspace.drools_training_master.Passport getPassport() {
+		return this.passport;
+	}
 
+	public void setPassport(com.myspace.drools_training_master.Passport passport) {
+		this.passport = passport;
+	}
+
+	public ValidPassport(com.myspace.drools_training_master.Passport passport) {
+		this.passport = passport;
+	}
 
 }
