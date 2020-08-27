@@ -6,12 +6,25 @@ package com.myspace.drools_training_master;
 
 public class ValidVisaApplication implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public ValidVisaApplication() {
-    }
+	private com.myspace.drools_training_master.VisaApplication visaApplication;
 
+	public ValidVisaApplication() {
+	}
 
+	public com.myspace.drools_training_master.VisaApplication getVisaApplication() {
+		return this.visaApplication;
+	}
 
+	public void setVisaApplication(
+			com.myspace.drools_training_master.VisaApplication visaApplication) {
+		this.visaApplication = visaApplication;
+	}
+
+	public ValidVisaApplication(
+			com.myspace.drools_training_master.VisaApplication visaApplication) {
+		this.visaApplication = visaApplication;
+	}
 
 }
