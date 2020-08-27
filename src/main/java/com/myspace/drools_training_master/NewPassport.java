@@ -18,7 +18,7 @@ public class NewPassport implements java.io.Serializable {
 
 	public NewPassport() {
 	}
-
+	
 	public java.lang.String getPassportNumber() {
 		return this.passportNumber;
 	}
@@ -67,6 +67,10 @@ public class NewPassport implements java.io.Serializable {
 		this.cause = cause;
 	}
 
+    public boolean isExpired() {
+        return this.expiresOn.isBefore(java.time.LocalDate.now());
+    }
+    
 	public NewPassport(java.lang.String passportNumber, java.lang.String name,
 			java.time.LocalDate expiresOn, int unusedVisaPages, int age,
 			java.lang.String cause) {
