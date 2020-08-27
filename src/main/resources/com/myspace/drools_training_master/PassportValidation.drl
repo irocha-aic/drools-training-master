@@ -1,9 +1,9 @@
 package com.myspace.drools_training_master;
 
 
-com.myspace.drools_training_master.InvalidPassport;
-com.myspace.drools_training_master.Passport;
-com.myspace.drools_training_master.Validation;
+import com.myspace.drools_training_master.InvalidPassport;
+import com.myspace.drools_training_master.Passport;
+import com.myspace.drools_training_master.Validation;
 
 
 rule "Expired passport"
