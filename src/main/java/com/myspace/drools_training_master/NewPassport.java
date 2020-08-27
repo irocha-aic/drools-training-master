@@ -15,7 +15,7 @@ public class NewPassport implements java.io.Serializable {
 	private int age;
 
 	@org.kie.api.definition.type.Label(value = "\"\"")
-	private java.lang.String cause;
+	private java.lang.String cause = "";
 
 	public NewPassport() {
 	}
