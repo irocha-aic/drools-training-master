@@ -81,5 +81,11 @@ public class Passport implements java.io.Serializable {
 		this.age = age;
 		this.cause = cause;
 	}
+	
+	@Override
+    public String toString() {
+       return java.lang.String.format("Passport[no:%s, name:%s]", passportNumber, name);
+    }
+
 
 }
