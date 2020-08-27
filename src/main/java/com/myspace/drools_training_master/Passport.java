@@ -16,6 +16,8 @@ public class Passport implements java.io.Serializable {
 
 	private java.lang.String cause = "";
 
+	private java.lang.String validation;
+
 	public Passport() {
 	}
 
@@ -66,92 +68,85 @@ public class Passport implements java.io.Serializable {
 	public void setCause(java.lang.String cause) {
 		this.cause = cause;
 	}
-	
+
 	public boolean isExpired() {
-        return this.expiresOn.isBefore(java.time.LocalDate.now());
-    }
+		return this.expiresOn.isBefore(java.time.LocalDate.now());
+	}
+
+	@Override
+	public String toString() {
+		return java.lang.String.format("Passport[no:%s, name:%s]",
+				passportNumber, name);
+	}
+
+	public static PassportBuilder newBuilder() {
+		return new PassportBuilder();
+	}
+
+	public static final class PassportBuilder {
+		private java.lang.String passportNumber;
+		private java.lang.String name;
+		private java.time.LocalDate expiresOn;
+		private int unusedVisaPages;
+		private int age;
+
+		private PassportBuilder() {
+		}
+
+		public PassportBuilder withPassportNumber(
+				java.lang.String passportNumber) {
+			this.passportNumber = passportNumber;
+			return this;
+		}
+
+		public PassportBuilder withName(java.lang.String name) {
+			this.name = name;
+			return this;
+		}
+
+		public PassportBuilder withExpiresOn(java.time.LocalDate expiresOn) {
+			this.expiresOn = expiresOn;
+			return this;
+		}
+
+		public PassportBuilder withUnusedVisaPages(int unusedVisaPages) {
+			this.unusedVisaPages = unusedVisaPages;
+			return this;
+		}
+
+		public PassportBuilder withAge(int age) {
+			this.age = age;
+			return this;
+		}
+
+		public Passport build() {
+			Passport passport = new Passport();
+			passport.passportNumber = passportNumber;
+			passport.name = name;
+			passport.expiresOn = expiresOn;
+			passport.unusedVisaPages = unusedVisaPages;
+			passport.age = age;
+			return passport;
+		}
+	}
+
+	public java.lang.String getValidation() {
+		return this.validation;
+	}
+
+	public void setValidation(java.lang.String validation) {
+		this.validation = validation;
+	}
 
 	public Passport(java.lang.String passportNumber, java.lang.String name,
 			java.time.LocalDate expiresOn, int unusedVisaPages, int age,
-			java.lang.String cause) {
+			java.lang.String cause, java.lang.String validation) {
 		this.passportNumber = passportNumber;
 		this.name = name;
 		this.expiresOn = expiresOn;
 		this.unusedVisaPages = unusedVisaPages;
 		this.age = age;
 		this.cause = cause;
+		this.validation = validation;
 	}
-	
-	@Override
-    public String toString() {
-       return java.lang.String.format("Passport[no:%s, name:%s]", passportNumber, name);
-    }
-    
-    public static PassportBuilder newBuilder() {
-       return new PassportBuilder();
-    }
-    
-    public static final class PassportBuilder {
-    private java.lang.String passportNumber;
-    private java.lang.String name;
-    private java.time.LocalDate expiresOn;
-    private int unusedVisaPages;
-    private int age;
-
-    private PassportBuilder() {
-    }
-
-    public PassportBuilder withPassportNumber(java.lang.String passportNumber) {
-      this.passportNumber = passportNumber;
-      return this;
-    }
-
-    public PassportBuilder withName(java.lang.String name) {
-      this.name = name;
-      return this;
-    }
-
-    public PassportBuilder withExpiresOn(java.time.LocalDate expiresOn) {
-      this.expiresOn = expiresOn;
-      return this;
-    }
-
-    public PassportBuilder withUnusedVisaPages(int unusedVisaPages) {
-      this.unusedVisaPages = unusedVisaPages;
-      return this;
-    }
-
-    public PassportBuilder withAge(int age) {
-      this.age = age;
-      return this;
-    }
-
-    public Passport build() {
-      Passport passport = new Passport();
-      passport.passportNumber = passportNumber;
-      passport.name = name;
-      passport.expiresOn = expiresOn;
-      passport.unusedVisaPages = unusedVisaPages;
-      passport.age = age;
-      return passport;
-    }
-    }
-  
-    @Override
-    public boolean equals(java.lang.Object o) {
-       if (this == o) return true;
-       if (!(o instanceof Passport)) return false;
-       Passport passport = (Passport) o;
-       return unusedVisaPages == passport.unusedVisaPages &&
-        age == passport.age &&
-        java.util.Objects.equals(passportNumber, passport.passportNumber) &&
-        java.util.Objects.equals(name, passport.name) &&
-        java.util.Objects.equals(expiresOn, passport.expiresOn) &&
-        java.util.Objects.equals(cause, passport.cause);
-    }
-
-    @Override
-    public int hashCode() {
-       return java.util.Objects.hash(passportNumber, name, expiresOn, unusedVisaPages, age, cause);
-    }
 }
