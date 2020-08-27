@@ -90,5 +90,51 @@ public class Passport implements java.io.Serializable {
     public static PassportBuilder newBuilder() {
        return new PassportBuilder();
     }
+    
+    public static final class PassportBuilder {
+    private java.lang.String passportNumber;
+    private java.lang.String name;
+    private java.time.LocalDate expiresOn;
+    private int unusedVisaPages;
+    private int age;
+
+    private PassportBuilder() {
+    }
+
+    public PassportBuilder withPassportNumber(java.lang.String passportNumber) {
+      this.passportNumber = passportNumber;
+      return this;
+    }
+
+    public PassportBuilder withName(java.lang.String name) {
+      this.name = name;
+      return this;
+    }
+
+    public PassportBuilder withExpiresOn(java.time.LocalDate expiresOn) {
+      this.expiresOn = expiresOn;
+      return this;
+    }
+
+    public PassportBuilder withUnusedVisaPages(int unusedVisaPages) {
+      this.unusedVisaPages = unusedVisaPages;
+      return this;
+    }
+
+    public PassportBuilder withAge(int age) {
+      this.age = age;
+      return this;
+    }
+
+    public Passport build() {
+      Passport passport = new Passport();
+      passport.passportNumber = passportNumber;
+      passport.name = name;
+      passport.expiresOn = expiresOn;
+      passport.unusedVisaPages = unusedVisaPages;
+      passport.age = age;
+      return passport;
+    }
+  }
 
 }
