@@ -14,6 +14,8 @@ public class Passport implements java.io.Serializable {
 	private int unusedVisaPages;
 	private int age;
 
+	private java.lang.String cause;
+
 	public Passport() {
 	}
 
@@ -57,13 +59,23 @@ public class Passport implements java.io.Serializable {
 		this.age = age;
 	}
 
+	public java.lang.String getCause() {
+		return this.cause;
+	}
+
+	public void setCause(java.lang.String cause) {
+		this.cause = cause;
+	}
+
 	public Passport(java.lang.String passportNumber, java.lang.String name,
-			java.time.LocalDate expiresOn, int unusedVisaPages, int age) {
+			java.time.LocalDate expiresOn, int unusedVisaPages, int age,
+			java.lang.String cause) {
 		this.passportNumber = passportNumber;
 		this.name = name;
 		this.expiresOn = expiresOn;
 		this.unusedVisaPages = unusedVisaPages;
 		this.age = age;
+		this.cause = cause;
 	}
 
 }
