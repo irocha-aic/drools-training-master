@@ -14,7 +14,7 @@ public class Passport implements java.io.Serializable {
 	private int unusedVisaPages;
 	private int age;
 
-	private java.lang.String cause;
+	private java.lang.String cause = "";
 
 	public Passport() {
 	}
