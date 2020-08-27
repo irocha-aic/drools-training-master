@@ -6,12 +6,56 @@ package com.myspace.drools_training_master;
 
 public class FamilyVisaApplication implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public FamilyVisaApplication() {
-    }
+	private int applicationId;
+	private java.util.List<java.lang.String> passportNumbers;
+	private java.time.LocalDate visitStartDate;
+	private java.time.LocalDate visitEndDate;
 
+	public FamilyVisaApplication() {
+	}
 
+	public int getApplicationId() {
+		return this.applicationId;
+	}
 
+	public void setApplicationId(int applicationId) {
+		this.applicationId = applicationId;
+	}
+
+	public java.util.List<java.lang.String> getPassportNumbers() {
+		return this.passportNumbers;
+	}
+
+	public void setPassportNumbers(
+			java.util.List<java.lang.String> passportNumbers) {
+		this.passportNumbers = passportNumbers;
+	}
+
+	public java.time.LocalDate getVisitStartDate() {
+		return this.visitStartDate;
+	}
+
+	public void setVisitStartDate(java.time.LocalDate visitStartDate) {
+		this.visitStartDate = visitStartDate;
+	}
+
+	public java.time.LocalDate getVisitEndDate() {
+		return this.visitEndDate;
+	}
+
+	public void setVisitEndDate(java.time.LocalDate visitEndDate) {
+		this.visitEndDate = visitEndDate;
+	}
+
+	public FamilyVisaApplication(int applicationId,
+			java.util.List<java.lang.String> passportNumbers,
+			java.time.LocalDate visitStartDate, java.time.LocalDate visitEndDate) {
+		this.applicationId = applicationId;
+		this.passportNumbers = passportNumbers;
+		this.visitStartDate = visitStartDate;
+		this.visitEndDate = visitEndDate;
+	}
 
 }
