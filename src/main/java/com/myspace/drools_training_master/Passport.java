@@ -130,13 +130,12 @@ public class Passport implements java.io.Serializable {
 
 	public Passport(java.lang.String passportNumber, java.lang.String name,
 			java.time.LocalDate expiresOn, int unusedVisaPages, int age,
-			java.lang.String cause, java.lang.String validation) {
+			java.lang.String cause) {
 		this.passportNumber = passportNumber;
 		this.name = name;
 		this.expiresOn = expiresOn;
 		this.unusedVisaPages = unusedVisaPages;
 		this.age = age;
 		this.cause = cause;
-		this.validation = validation;
 	}
 }
