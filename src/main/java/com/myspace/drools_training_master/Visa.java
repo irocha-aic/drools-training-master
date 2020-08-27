@@ -6,12 +6,23 @@ package com.myspace.drools_training_master;
 
 public class Visa implements java.io.Serializable {
 
-    static final long serialVersionUID = 1L;
+	static final long serialVersionUID = 1L;
 
-    public Visa() {
-    }
+	private java.lang.String passportNumber;
 
+	public Visa() {
+	}
 
+	public java.lang.String getPassportNumber() {
+		return this.passportNumber;
+	}
 
+	public void setPassportNumber(java.lang.String passportNumber) {
+		this.passportNumber = passportNumber;
+	}
+
+	public Visa(java.lang.String passportNumber) {
+		this.passportNumber = passportNumber;
+	}
 
 }
