@@ -14,8 +14,6 @@ public class NewPassport implements java.io.Serializable {
 	private int unusedVisaPages;
 	private int age;
 	
-    private Validation validation = Validation.UNKNOWN;
-
 	private java.lang.String cause = "";
 
 	public NewPassport() {
