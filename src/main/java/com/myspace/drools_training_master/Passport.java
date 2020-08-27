@@ -16,7 +16,7 @@ public class Passport implements java.io.Serializable {
 
 	private java.lang.String cause = "";
 
-	private java.lang.String validation;
+	private java.lang.String validation = Validation.UNKNOWN;
 
 	public Passport() {
 	}
