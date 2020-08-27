@@ -13,6 +13,8 @@ public class NewPassport implements java.io.Serializable {
 	private java.time.LocalDate expiresOn;
 	private int unusedVisaPages;
 	private int age;
+	
+    private Validation validation = Validation.UNKNOWN;
 
 	private java.lang.String cause = "";
 
