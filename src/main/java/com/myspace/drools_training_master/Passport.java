@@ -137,9 +137,8 @@ public class Passport implements java.io.Serializable {
     }
     }
   
-  
     @Override
-    public boolean equals(Object o) {
+    public boolean equals(java.lang.Object o) {
        if (this == o) return true;
        if (!(o instanceof Passport)) return false;
        Passport passport = (Passport) o;
@@ -154,6 +153,6 @@ public class Passport implements java.io.Serializable {
 
     @Override
     public int hashCode() {
-       return Objects.hash(passportNumber, name, expiresOn, unusedVisaPages, age, validation, cause);
+       return Objects.hash(passportNumber, name, expiresOn, unusedVisaPages, age, cause);
     }
 }
