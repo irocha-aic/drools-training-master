@@ -147,7 +147,6 @@ public class Passport implements java.io.Serializable {
         Objects.equals(passportNumber, passport.passportNumber) &&
         Objects.equals(name, passport.name) &&
         Objects.equals(expiresOn, passport.expiresOn) &&
-        validation == passport.validation &&
         Objects.equals(cause, passport.cause);
     }
 
