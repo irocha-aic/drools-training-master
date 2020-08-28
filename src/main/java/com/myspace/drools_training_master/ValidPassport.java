@@ -24,5 +24,10 @@ public class ValidPassport implements java.io.Serializable {
 	public ValidPassport(com.myspace.drools_training_master.Passport passport) {
 		this.passport = passport;
 	}
+	
+    @Override
+    public java.lang.String toString() {
+       return "Valid" + passport;
+    }
 
 }
