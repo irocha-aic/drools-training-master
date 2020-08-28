@@ -3,16 +3,16 @@ package com.myspace.drools_training_master;
 import com.myspace.drools_training_master.Passport;
 import com.myspace.drools_training_master.InvalidPassport;
 import com.myspace.drools_training_master.InvalidFamilyVisaApplication;
-import com.myspace.drools_training_master.FamilyVisaApplication;
+//import com.myspace.drools_training_master.FamilyVisaApplication;
 
 import java.time.LocalDate;
 
 rule "Invalidate visa applications with invalid passport"
 	dialect "mvel"
 	when
-		$familyVisaApplication: FamilyVisaApplication( )
-		InvalidPassport( $familyVisaApplication.passportNumbers.contains(this.passport.passportNumber) )
+		//$familyVisaApplication: FamilyVisaApplication( )
+		//InvalidPassport( $familyVisaApplication.passportNumbers.contains(this.passport.passportNumber) )
 	then
-		System.out.println( "Set " + $familyVisaApplication + " invalid as it contains invalid passport");
-		insert( new InvalidFamilyVisaApplication($familyVisaApplication) )
+		//System.out.println( "Set " + $familyVisaApplication + " invalid as it contains invalid passport");
+		//insert( new InvalidFamilyVisaApplication($familyVisaApplication) )
 end
