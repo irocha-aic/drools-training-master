@@ -28,7 +28,7 @@ public class InvalidFamilyVisaApplication implements java.io.Serializable {
 	}
 	
     @Override
-    public String toString() {
+    public java.lang.String toString() {
        return "Invalid:" + familyVisaApplication;
     }
 
