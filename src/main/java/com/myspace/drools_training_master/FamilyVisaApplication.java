@@ -57,5 +57,65 @@ public class FamilyVisaApplication implements java.io.Serializable {
 		this.visitStartDate = visitStartDate;
 		this.visitEndDate = visitEndDate;
 	}
+	
+    @Override
+    public String toString() {
+        return String.format("FamilyVisaApplication[#%d, %s]", applicationId, join(passportNumbers));
+    }
 
+    public static FamilyVisaApplicationBuilder newBuilder() {
+       return new FamilyVisaApplicationBuilder();
+    }
+
+
+    public static final class FamilyVisaApplicationBuilder {
+       private int applicationId;
+       private List<String> passportNumbers = new ArrayList<>();
+       private LocalDate visitStartDate;
+       private LocalDate visitEndDate;
+       
+       
+       private FamilyVisaApplicationBuilder() {
+       }
+
+
+       public FamilyVisaApplicationBuilder withApplicationId(int applicationId) {
+          this.applicationId = applicationId;
+          return this;
+       }
+
+       public FamilyVisaApplicationBuilder withPassportNumbers(List<String> passportNumbers) {
+          this.passportNumbers = passportNumbers;
+          return this;
+       }
+
+       public FamilyVisaApplicationBuilder withVisitStartDate(LocalDate visitStartDate) {
+          this.visitStartDate = visitStartDate;
+          return this;
+       }
+
+       public FamilyVisaApplicationBuilder withVisitEndDate(LocalDate visitEndDate) {
+          this.visitEndDate = visitEndDate;
+          return this;
+       }
+
+       public FamilyVisaApplication build() {
+          FamilyVisaApplication familyVisaApplication = new FamilyVisaApplication(applicationId);
+          familyVisaApplication.visitEndDate = this.visitEndDate;
+          familyVisaApplication.passportNumbers = this.passportNumbers;
+          familyVisaApplication.visitStartDate = this.visitStartDate;
+          return familyVisaApplication;
+       }
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj instanceof FamilyVisaApplication
+        && ((FamilyVisaApplication) obj).getApplicationId() == applicationId;
+    }
+
+    @Override
+    public int hashCode() {
+       return new Long(applicationId).hashCode();
+    }	
 }
