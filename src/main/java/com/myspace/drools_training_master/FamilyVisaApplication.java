@@ -70,9 +70,9 @@ public class FamilyVisaApplication implements java.io.Serializable {
 
     public static final class FamilyVisaApplicationBuilder {
        private int applicationId;
-       private List<String> passportNumbers = new ArrayList<>();
-       private LocalDate visitStartDate;
-       private LocalDate visitEndDate;
+       private java.util.List<java.lang.String> passportNumbers = new ArrayList<>();
+       private java.time.LocalDate visitStartDate;
+       private java.time.LocalDate visitEndDate;
        
        
        private FamilyVisaApplicationBuilder() {
@@ -84,17 +84,17 @@ public class FamilyVisaApplication implements java.io.Serializable {
           return this;
        }
 
-       public FamilyVisaApplicationBuilder withPassportNumbers(List<String> passportNumbers) {
+       public FamilyVisaApplicationBuilder withPassportNumbers(java.util.List<java.lang.String> passportNumbers) {
           this.passportNumbers = passportNumbers;
           return this;
        }
 
-       public FamilyVisaApplicationBuilder withVisitStartDate(LocalDate visitStartDate) {
+       public FamilyVisaApplicationBuilder withVisitStartDate(java.time.LocalDate visitStartDate) {
           this.visitStartDate = visitStartDate;
           return this;
        }
 
-       public FamilyVisaApplicationBuilder withVisitEndDate(LocalDate visitEndDate) {
+       public FamilyVisaApplicationBuilder withVisitEndDate(java.time.LocalDate visitEndDate) {
           this.visitEndDate = visitEndDate;
           return this;
        }
