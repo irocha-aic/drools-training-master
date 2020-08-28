@@ -55,5 +55,10 @@ public class VisaApplication implements java.io.Serializable {
 		this.visitStartDate = visitStartDate;
 		this.visitEndDate = visitEndDate;
 	}
+	
+    @Override
+    public java.lang.String toString() {
+       return "VisaApplication(#" + applicationId + ", pass:" + passportNumber + ")";
+    }
 
 }
