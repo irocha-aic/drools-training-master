@@ -57,54 +57,5 @@ public class FamilyVisaApplication implements java.io.Serializable {
 		this.visitStartDate = visitStartDate;
 		this.visitEndDate = visitEndDate;
 	}
-	
-    @Override
-    public String toString() {
-        return String.format("FamilyVisaApplication[#%d, %s]", applicationId, join(passportNumbers));
-    }
 
-    public static FamilyVisaApplicationBuilder newBuilder() {
-       return new FamilyVisaApplicationBuilder();
-    }
-
-
-    public static final class FamilyVisaApplicationBuilder {
-       private int applicationId;
-       private java.util.List<java.lang.String> passportNumbers = new ArrayList<>();
-       private java.time.LocalDate visitStartDate;
-       private java.time.LocalDate visitEndDate;
-       
-       
-       private FamilyVisaApplicationBuilder() {
-       }
-
-
-       public FamilyVisaApplicationBuilder withApplicationId(int applicationId) {
-          this.applicationId = applicationId;
-          return this;
-       }
-
-       public FamilyVisaApplicationBuilder withPassportNumbers(java.util.List<java.lang.String> passportNumbers) {
-          this.passportNumbers = passportNumbers;
-          return this;
-       }
-
-       public FamilyVisaApplicationBuilder withVisitStartDate(java.time.LocalDate visitStartDate) {
-          this.visitStartDate = visitStartDate;
-          return this;
-       }
-
-       public FamilyVisaApplicationBuilder withVisitEndDate(java.time.LocalDate visitEndDate) {
-          this.visitEndDate = visitEndDate;
-          return this;
-       }
-
-       public FamilyVisaApplication build() {
-          FamilyVisaApplication familyVisaApplication = new FamilyVisaApplication(applicationId);
-          familyVisaApplication.visitEndDate = this.visitEndDate;
-          familyVisaApplication.passportNumbers = this.passportNumbers;
-          familyVisaApplication.visitStartDate = this.visitStartDate;
-          return familyVisaApplication;
-       }
-    }
 }
