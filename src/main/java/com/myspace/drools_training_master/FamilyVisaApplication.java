@@ -61,7 +61,7 @@ public class FamilyVisaApplication implements java.io.Serializable {
     public static String join(java.util.Collection<java.lang.String> collection) {
       return collection.stream()
         .map(Object::toString)
-        .collect(java.util.Collectors.joining(","));
+        .collect(java.util.stream.Collectors.joining(","));
     }
 
   @Override
