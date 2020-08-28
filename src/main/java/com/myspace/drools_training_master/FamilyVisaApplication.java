@@ -57,5 +57,17 @@ public class FamilyVisaApplication implements java.io.Serializable {
 		this.visitStartDate = visitStartDate;
 		this.visitEndDate = visitEndDate;
 	}
+	
+    public static String join(java.util.Collection<java.lang.String> collection) {
+      return collection.stream()
+        .map(Object::toString)
+        .collect(Collectors.joining(","));
+    }
+
+  @Override
+  public java.lang.String toString() {
+    return java.lang.String.format("FamilyVisaApplication[#%d, %s]", applicationId, join(passportNumbers));
+  }
+	
 
 }
