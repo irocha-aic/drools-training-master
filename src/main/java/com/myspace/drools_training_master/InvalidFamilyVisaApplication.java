@@ -26,5 +26,10 @@ public class InvalidFamilyVisaApplication implements java.io.Serializable {
 			com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication) {
 		this.familyVisaApplication = familyVisaApplication;
 	}
+	
+    @Override
+    public String toString() {
+       return "Invalid:" + familyVisaApplication;
+    }
 
 }
