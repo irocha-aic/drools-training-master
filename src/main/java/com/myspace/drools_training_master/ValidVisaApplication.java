@@ -28,7 +28,7 @@ public class ValidVisaApplication implements java.io.Serializable {
 	}
 	
     @Override
-    public String toString() {
+    public java.lang.String toString() {
        return "Valid" + visaApplication;
     }
 
