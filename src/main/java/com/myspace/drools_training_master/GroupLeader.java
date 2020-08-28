@@ -9,8 +9,6 @@ public class GroupLeader implements java.io.Serializable {
 	static final long serialVersionUID = 1L;
 
 	private com.myspace.drools_training_master.Passport passport;
-	private com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication;
-
 	public GroupLeader() {
 	}
 
@@ -22,20 +20,8 @@ public class GroupLeader implements java.io.Serializable {
 		this.passport = passport;
 	}
 
-	public com.myspace.drools_training_master.FamilyVisaApplication getFamilyVisaApplication() {
-		return this.familyVisaApplication;
-	}
-
-	public void setFamilyVisaApplication(
-			com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication) {
-		this.familyVisaApplication = familyVisaApplication;
-	}
-
-	public GroupLeader(
-			com.myspace.drools_training_master.Passport passport,
-			com.myspace.drools_training_master.FamilyVisaApplication familyVisaApplication) {
+	public GroupLeader(com.myspace.drools_training_master.Passport passport) {
 		this.passport = passport;
-		this.familyVisaApplication = familyVisaApplication;
 	}
 
 }
