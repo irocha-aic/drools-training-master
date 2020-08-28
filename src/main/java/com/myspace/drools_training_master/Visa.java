@@ -24,5 +24,10 @@ public class Visa implements java.io.Serializable {
 	public Visa(java.lang.String passportNumber) {
 		this.passportNumber = passportNumber;
 	}
+	
+    @Override
+    public java.lang.String toString() {
+       return "Visa[passport:" + passportNumber + "]";
+    }
 
 }
