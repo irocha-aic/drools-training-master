@@ -26,5 +26,10 @@ public class InvalidVisaApplication implements java.io.Serializable {
 			com.myspace.drools_training_master.VisaApplication visaApplication) {
 		this.visaApplication = visaApplication;
 	}
+	
+    @Override
+    public java.lang.String toString() {
+       return "Invalid" + visaApplication;
+    }
 
 }
