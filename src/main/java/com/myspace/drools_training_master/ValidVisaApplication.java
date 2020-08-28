@@ -26,5 +26,10 @@ public class ValidVisaApplication implements java.io.Serializable {
 			com.myspace.drools_training_master.VisaApplication visaApplication) {
 		this.visaApplication = visaApplication;
 	}
+	
+    @Override
+    public String toString() {
+       return "Valid" + visaApplication;
+    }
 
 }
