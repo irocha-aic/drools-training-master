@@ -24,5 +24,10 @@ public class InvalidPassport implements java.io.Serializable {
 	public InvalidPassport(com.myspace.drools_training_master.Passport passport) {
 		this.passport = passport;
 	}
+	
+	@Override
+    public String toString() {
+       return "Invalid" + this.passport;
+    }
 
 }
