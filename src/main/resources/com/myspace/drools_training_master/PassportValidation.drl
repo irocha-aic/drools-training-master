@@ -4,10 +4,6 @@ package com.myspace.drools_training_master;
 import com.myspace.drools_training_master.InvalidPassport;
 import com.myspace.drools_training_master.Passport;
 
-query checkInvalidPassport()
-    $invalidPassport: InvalidPassport()
-end
-
 rule "Expired passport"
 	dialect "mvel"
 	when
