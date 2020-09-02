@@ -5,7 +5,7 @@ import com.myspace.drools_training_master.Passport;
 
 query checkInvalidPassport()
     $invalidPassport: InvalidPassport()
-    $invalidPassport.passport
+    $invalid: $invalidPassport.passport
 end 
 
 rule "Expired passport"
