@@ -3,7 +3,7 @@ package com.myspace.drools_training_master;
 import com.myspace.drools_training_master.InvalidPassport;
 import com.myspace.drools_training_master.Passport;
 
-query checkInvalidPassport()
+query List<String> checkInvalidPassport()
     $invalidPassport: InvalidPassport()
     $invalidPassport.passport
 end 
