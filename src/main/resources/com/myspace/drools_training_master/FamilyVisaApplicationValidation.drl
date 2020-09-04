@@ -7,10 +7,6 @@ import com.myspace.drools_training_master.FamilyVisaApplication;
 
 import java.time.LocalDate;
 
-query checkInvalidFamilyVisaApplication()
-    $invalidFamilyVisaApplication: InvalidFamilyVisaApplication()
-end
-
 rule "Invalidate visa applications with invalid passport"
 	dialect "mvel"
 	when
